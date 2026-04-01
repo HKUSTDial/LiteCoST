@@ -4,6 +4,7 @@
 <div align="center">
 
 [![OpenReview](https://img.shields.io/badge/OpenReview-LiteCoST-brightgreen.svg)](https://openreview.net/forum?id=faECRsdRav)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.29232-red)](https://arxiv.org/abs/2603.29232)
 [![Model](https://img.shields.io/badge/🤗-Model-orange)](https://huggingface.co/SetonLiang2/LiteCoST/)
 [![Python](https://img.shields.io/badge/Python-3.11.10-3776AB.svg?style=flat)](https://www.python.org/downloads/release/python-31110/)
 
