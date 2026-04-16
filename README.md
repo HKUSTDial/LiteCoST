@@ -65,10 +65,21 @@ src
 └── utils.py                     # Utility functions module
 ```
 
+## ⚙️ **Setup**
+1. Basic Requirement
+```bash
+pip install -r requirements.txt
+```
+
+2. GRPO Requirement
+```bash
+pip install -r grpo_requirements.txt
+```
+
 ## 🛠️ **Usage**
 1. Generate the Serialized Structured Output 
 ```python
-python main.py --model gpt-4o --dataset Loong --structured --document
+python main.py --model gpt-4o --dataset Finqa --structured --document
 
 cd src
 python data_verification.py
@@ -84,7 +95,7 @@ python -m src.sft
 3. Conduct GRPO Optimization
 ```python
 cd verl
-bash scripts/run_grpo_cost.sh
+bash scripts/run_llama3.2-3b_cost.sh
 
 ## merge model 
 python scripts/model_merger.py merge --backend fsdp --local_dir checkpoints/cost-sft/cost-sft-llama3.2-3b-ins/global_step_1566/actor --target_dir merged/cost-grpo/llama3.2-3b-ins
@@ -93,8 +104,7 @@ python scripts/model_merger.py merge --backend fsdp --local_dir checkpoints/cost
 ## **Usage Examples**
 ```python
 1. Quick Deployment
-cd Loong/src
-bash vllm_example.sh
+bash scripts/vllm_example.sh
 
 2. Run the pipeline
 python main.py --model deployed_model --dataset Loong --structured --document
