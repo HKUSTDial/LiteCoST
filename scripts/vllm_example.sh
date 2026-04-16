@@ -23,19 +23,11 @@
 
 # export NCCL_DEBUG=INFO
 export CUDA_VISIBLE_DEVICES=0,1
-# python -m vllm.entrypoints.openai.api_server \
-# --port 8000 \
-# --served-model-name qwen-grpo \
-# --gpu_memory_utilization 0.9 \
-# --tensor-parallel-size 4 \
-# --model "/data/liangzhuowen/download/verl/merged/fin/cost_grpo_verl/qwen2-7b-ins" \
-# --trust-remote-code 
-
 
 python -m vllm.entrypoints.openai.api_server \
 --port 8088 \
 --served-model-name llama3.2-3b-ins-grpo \
 --gpu_memory_utilization 0.9 \
 --tensor-parallel-size 2 \
---model "/data/liangzhuowen/projects/LiteCoST/verl/merged/llama3.2-3b-ins" \
+--model "verl/merged/llama3.2-3b-ins" \
 --trust-remote-code 
