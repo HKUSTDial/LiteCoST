@@ -1,6 +1,5 @@
 # For Qwen2, you can enable the long-context capabilities by following these steps.
 # modify the config.json file by including the below snippet:
-# access token: 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
 # """
 # {
 #         "architectures": [
